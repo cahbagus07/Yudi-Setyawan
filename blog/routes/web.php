@@ -19,3 +19,18 @@ Route::get('/hello', function () {
 <p>Ini adalah postingan pertama dari mata kuliah Web Framework</p></center>
     ";
 });
+route::get('/show/{id?}', function($id=1){
+	echo "Nilai Parameter Adalah ".$id;
+});
+route::get('/edit/{nama}', function ($nama){
+	echo "Nilai Parameter Adalah ".$nama;
+}) ->where('nama','[A-Za-z]+');
+
+route::get('/index',function(){
+	echo "<a href = '".route('create')."'> Akses Route dengan nama </a>";
+});
+route::get('/create', function(){
+	echo "Route diakses menggunakan nama";
+})->name('create');
+
+route::get('/produk','produkController@index');
