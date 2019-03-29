@@ -8,6 +8,12 @@ class produkController extends Controller
 {
     public function index()
     {
-    	return 'Mengakses Fungsi di Controler Menggunakan Route';
+    	$produk = 'Aqua 400ML';
+    	return view('produk/index', compact('produk'));
     }
+   	public function show()
+   	{
+   		$produk = ['Aqua 115 ML','Minuman Bersoda','Buku Sejarah','Mouse','CPU'];
+   		return view('produk/show',compact('produk'));
+   	}
 }

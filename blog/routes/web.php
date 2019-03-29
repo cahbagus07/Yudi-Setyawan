@@ -34,3 +34,12 @@ route::get('/create', function(){
 })->name('create');
 
 route::get('/produk','produkController@index');
+
+route::get('/produk/show', 'produkController@show');
+
+route::get('/halaman',function(){
+	$title = 'Harry Pooter';
+	$konten = 'haryy ppootter and the deathly hallows : part 2';
+	return view('konten.halaman',compact('title','konten'));
+
+});
