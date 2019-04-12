@@ -6,10 +6,15 @@ use Illuminate\Http\Request;
 
 class produkController extends Controller
 {
-    public function index()
+   /* public function index()
     {
     	$produk = 'Aqua 400ML';
     	return view('produk/index', compact('produk'));
+    }*/
+    public function index()
+    {
+        $produk = ['Meja','Kursi','Buku','Lampu'];
+        return view('produk.index',compact('produk'));
     }
    	public function show()
    	{
