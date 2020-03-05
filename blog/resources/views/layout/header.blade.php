@@ -1,1 +1,0 @@
-<h1>Memodifikasi Template Laravel dengan Bootstrap</h1>
